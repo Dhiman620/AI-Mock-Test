@@ -1,18 +1,20 @@
-import Footer from "@/components/footer"
-import Header from "@/components/header"
-import { Outlet } from "react-router"
+import Footer from "@/components/footer";
+import Header from "@/components/header";
+import AuthHandler from "@/handlers/auth_hendler";
+import { Outlet } from "react-router";
 
 export const PublicLayout = () => {
   return (
     <div>
       <div className=" w-full">
         {/*handelar to store data*/}
-        <Header/>
+        <AuthHandler />
+        <Header />
 
-        <Outlet/>
+        <Outlet />
 
-        <Footer/>
+        <Footer />
       </div>
     </div>
-  )
-}
+  );
+};
